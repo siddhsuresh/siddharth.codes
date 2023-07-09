@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 overrides:
   '@mdx-js/mdx': 2.2.1
   typescript: ^4.9.4
@@ -31,14 +27,14 @@ dependencies:
     specifier: ^3.0.0
     version: 3.0.0(astro@2.0.1)(tailwindcss@3.2.4)
   '@fontsource/brygada-1918':
-    specifier: ^4.5.11
-    version: 4.5.11
+    specifier: ^5.0.5
+    version: 5.0.5
   '@fontsource/inter':
     specifier: ^4.5.14
     version: 4.5.14
   '@mdx-js/mdx':
     specifier: 2.2.1
-    version: 2.2.1(patch_hash=xpblqcf4nverltfcba52wyvqbi)
+    version: 2.2.1_xpblqcf4nverltfcba52wyvqbi
   '@theatre/core':
     specifier: ^0.6.1
     version: 0.6.1
@@ -229,7 +225,7 @@ packages:
     dependencies:
       '@astrojs/markdown-remark': 2.0.0(astro@2.0.1)
       '@astrojs/prism': 2.0.0
-      '@mdx-js/mdx': 2.2.1(patch_hash=xpblqcf4nverltfcba52wyvqbi)
+      '@mdx-js/mdx': 2.2.1_xpblqcf4nverltfcba52wyvqbi
       '@mdx-js/rollup': 2.2.1
       acorn: 8.8.1
       es-module-lexer: 0.10.5
@@ -272,7 +268,7 @@ packages:
     dependencies:
       babel-preset-solid: 1.6.9
       solid-js: 1.5.7
-      vitefu: 0.2.4(vite@4.0.4)
+      vitefu: 0.2.4
     transitivePeerDependencies:
       - '@babel/core'
       - vite
@@ -487,6 +483,18 @@ packages:
     hasBin: true
     dependencies:
       '@babel/types': 7.20.7
+    dev: false
+
+  /@babel/plugin-syntax-jsx@7.18.6:
+    resolution: {integrity: sha512-6mmljtAedFGTWu2p/8WIORGwy+61PLgOMPOdazc7YoJ9ZCWUyFy3A6CpPkRKLKD1ToAesxX8KGEViAiLo9N+7Q==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+    dependencies:
+      '@babel/helper-plugin-utils': 7.20.2
     dev: false
 
   /@babel/plugin-syntax-jsx@7.18.6(@babel/core@7.20.12):
@@ -842,8 +850,8 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@fontsource/brygada-1918@4.5.11:
-    resolution: {integrity: sha512-BOqBowdAlbByX23ppEsS3syJ6zCGSwQ3XcUesIc72dILimqdgHmxzgZIoQfMhmkGZePjVhKmnfQD6J3ZsqTS3w==}
+  /@fontsource/brygada-1918@5.0.5:
+    resolution: {integrity: sha512-wiQkwBSi5M4eYUsAcpeQv7etE/ycmZLxGnNiCVagOJXankbcfM/hmdwGpHGWhM5d+4MXKJdrQewU++o9SenR1A==}
     dev: false
 
   /@fontsource/inter@4.5.14:
@@ -916,7 +924,7 @@ packages:
       detect-libc: 2.0.1
       https-proxy-agent: 5.0.1
       make-dir: 3.1.0
-      node-fetch: 2.6.7(encoding@0.1.13)
+      node-fetch: 2.6.7
       nopt: 5.0.0
       npmlog: 5.0.1
       rimraf: 3.0.2
@@ -927,7 +935,7 @@ packages:
       - supports-color
     dev: false
 
-  /@mdx-js/mdx@2.2.1(patch_hash=xpblqcf4nverltfcba52wyvqbi):
+  /@mdx-js/mdx@2.2.1_xpblqcf4nverltfcba52wyvqbi:
     resolution: {integrity: sha512-hZ3ex7exYLJn6FfReq8yTvA6TE53uW9UHJQM9IlSauOuS55J9y8RtA7W+dzp6Yrzr00/U1sd7q+Wf61q6SfiTQ==}
     dependencies:
       '@types/estree-jsx': 1.0.0
@@ -960,7 +968,7 @@ packages:
       rollup:
         optional: true
     dependencies:
-      '@mdx-js/mdx': 2.2.1(patch_hash=xpblqcf4nverltfcba52wyvqbi)
+      '@mdx-js/mdx': 2.2.1_xpblqcf4nverltfcba52wyvqbi
       '@rollup/pluginutils': 5.0.2
       source-map: 0.7.4
       vfile: 5.3.6
@@ -1453,7 +1461,7 @@ packages:
       edge-runtime: 2.0.0
       esbuild: 0.14.47
       exit-hook: 2.2.1
-      node-fetch: 2.6.7(encoding@0.1.13)
+      node-fetch: 2.6.7
       ts-node: 8.9.1(typescript@4.9.4)
       typescript: 4.9.4
     transitivePeerDependencies:
@@ -1848,7 +1856,7 @@ packages:
         optional: true
     dependencies:
       '@babel/helper-module-imports': 7.18.6
-      '@babel/plugin-syntax-jsx': 7.18.6(@babel/core@7.20.12)
+      '@babel/plugin-syntax-jsx': 7.18.6
       '@babel/types': 7.20.7
       html-entities: 2.3.3
       validate-html-nesting: 1.1.0
@@ -5126,6 +5134,18 @@ packages:
       clone: 2.1.2
     dev: false
 
+  /node-fetch@2.6.7:
+    resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
+    engines: {node: 4.x || >=6.0.0}
+    peerDependencies:
+      encoding: ^0.1.0
+    peerDependenciesMeta:
+      encoding:
+        optional: true
+    dependencies:
+      whatwg-url: 5.0.0
+    dev: false
+
   /node-fetch@2.6.7(encoding@0.1.13):
     resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
     engines: {node: 4.x || >=6.0.0}
@@ -7190,6 +7210,15 @@ packages:
       fsevents: 2.3.2
     dev: false
 
+  /vitefu@0.2.4:
+    resolution: {integrity: sha512-fanAXjSaf9xXtOOeno8wZXIhgia+CZury481LsDaV++lSvcU2R9Ch2bPh3PYFyoHW+w9LqAeYRISVQjUIew14g==}
+    peerDependencies:
+      vite: ^3.0.0 || ^4.0.0
+    peerDependenciesMeta:
+      vite:
+        optional: true
+    dev: false
+
   /vitefu@0.2.4(vite@4.0.4):
     resolution: {integrity: sha512-fanAXjSaf9xXtOOeno8wZXIhgia+CZury481LsDaV++lSvcU2R9Ch2bPh3PYFyoHW+w9LqAeYRISVQjUIew14g==}
     peerDependencies:
@@ -7433,3 +7462,7 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
