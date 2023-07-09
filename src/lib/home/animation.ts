@@ -37,8 +37,9 @@ let farPlane: number;
 let container: HTMLElement | null;
 let renderer: THREE.WebGLRenderer;
 
-const logos = ["/nextjs.png", "/blitz.png","/tanstack.png","/github.png"];
+const logos = ["/nextjs.png", "/blitz.png", "/tanstack.png", "/github.png"];
 
+let z = 0;
 class Cloud {
   mesh: THREE.Object3D;
   constructor() {
@@ -47,23 +48,12 @@ class Cloud {
     const mat = new THREE.MeshPhongMaterial({
       color: Colors.white,
     });
-    const nBlocs = 3 + Math.floor(Math.random() * 3) - 1;
-    for (let i = 0; i < 0; i++) {
-      const m = new THREE.Mesh(geom, mat);
-      const s = 0.1 + Math.random() * 0.9;
-      m.position.x = i * 15;
-      m.position.y = Math.random() * 10;
-      m.position.z = -5 + Math.random() * 5;
-      m.rotation.z = Math.random() * Math.PI * 2;
-      m.rotation.y = Math.random() * Math.PI * 2;
-      m.scale.set(s, s, s);
-      m.castShadow = true;
-      m.receiveShadow = true;
-      this.mesh.add(m);
+    const texture = new THREE.TextureLoader().load("/logos" + logos[z]);
+    if (z < logos.length - 1) {
+      z++;
+    } else {
+      z = 0;
     }
-    const texture = new THREE.TextureLoader().load(
-      "/logos" + logos[Math.floor(Math.random() * logos.length)]
-    );
     const cloud = new THREE.Mesh(
       new THREE.PlaneGeometry(20, 20),
       new THREE.MeshBasicMaterial({
@@ -74,6 +64,8 @@ class Cloud {
     cloud.position.y = Math.random() * 10;
     cloud.position.z = -5 + Math.random() * 5;
     cloud.rotation.z = -Math.PI;
+    cloud.castShadow = true;
+    cloud.receiveShadow = true;
     this.mesh.add(cloud);
   }
 }
