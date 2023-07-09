@@ -37,7 +37,7 @@ let farPlane: number;
 let container: HTMLElement | null;
 let renderer: THREE.WebGLRenderer;
 
-const logos = ["/nextjs.png", "/blitz.png", "/tanstack.png", "/github.png"];
+const logos = [ "/blitz.png"];
 
 let z = 0;
 class Cloud {
