@@ -1,8 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { formatDate } from "../lib/formatDate";
-import { Link } from "../lib/Link";
-import { Paragraph } from "../lib/prose/Paragraph";
+import Home from "../lib/home/Home.astro";
+// import { formatDate } from "../lib/formatDate";
+// import { Link } from "../lib/Link";
+// import { Paragraph } from "../lib/prose/Paragraph";
 import type { PostFrontmatter } from "../types";
 
 let posts = await Astro.glob<PostFrontmatter>("../../posts/**/*.mdx");
@@ -19,8 +20,9 @@ posts.sort((a, b) => {
 });
 ---
 
-<BaseLayout title="zaduma">
-  <h1 slot="header-content" class="text-gray-600 dark:text-gray-500">zaduma</h1>
+<BaseLayout title="Siddharth Suresh | Home">
+  <Home />
+  <!-- <h1 slot="header-content" class="text-gray-600 dark:text-gray-500">zaduma</h1>
   <main class="py-10 zaduma-prose">
     <Paragraph>
       <small class="text-gray-600 dark:text-gray-500"
@@ -63,7 +65,11 @@ posts.sort((a, b) => {
         );
       })
     }
-  </ul>
+  </ul> -->
+
+  <h1 slot="header-content" class="text-gray-600 dark:text-gray-500">
+   
+  </h1>
   <style>
     ul:hover li:not(:hover) :where(h2, time) {
       @apply text-gray-600 transition-colors;

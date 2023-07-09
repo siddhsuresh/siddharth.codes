@@ -39,6 +39,12 @@ dependencies:
   '@mdx-js/mdx':
     specifier: 2.2.1
     version: 2.2.1(patch_hash=xpblqcf4nverltfcba52wyvqbi)
+  '@theatre/core':
+    specifier: ^0.6.1
+    version: 0.6.1
+  '@theatre/studio':
+    specifier: ^0.6.1
+    version: 0.6.1(@theatre/core@0.6.1)
   '@types/lz-string':
     specifier: ^1.3.34
     version: 1.3.34
@@ -84,6 +90,9 @@ dependencies:
   tailwindcss:
     specifier: ^3.2.4
     version: 3.2.4(postcss@8.4.20)
+  three:
+    specifier: ^0.79.0
+    version: 0.79.0
   unified:
     specifier: ^10.1.2
     version: 10.1.2
@@ -1043,6 +1052,27 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       defer-to-connect: 1.1.3
+    dev: false
+
+  /@theatre/core@0.6.1:
+    resolution: {integrity: sha512-ZvSqAAB2LVVnB6hDzKQOVHjeZtb7Hvqu1IrFRITv4Kq6465Cn9VI2nwcDjelDCOmTIv23pd8d3Fz2DPYjjF9mg==}
+    dependencies:
+      '@theatre/dataverse': 0.6.1
+    dev: false
+
+  /@theatre/dataverse@0.6.1:
+    resolution: {integrity: sha512-iomovt4oWCEAZFP6/BdSJAb2cAjPOs6y3wh7QlrUBmEwdQ/21ISK9N2IsCzlJ0t16w58l7Eh61Gw60Y0t7/uNA==}
+    dependencies:
+      lodash-es: 4.17.21
+    dev: false
+
+  /@theatre/studio@0.6.1(@theatre/core@0.6.1):
+    resolution: {integrity: sha512-aJlHnfYctYbw2zDd+AK0ts4oKR4RuiQZCgMhANKv8VucINFqfDFcl6ixN6qxCTQfBFe4s/qyyc9y/9Np1ZCPwQ==}
+    peerDependencies:
+      '@theatre/core': '*'
+    dependencies:
+      '@theatre/core': 0.6.1
+      '@theatre/dataverse': 0.6.1
     dev: false
 
   /@trysound/sax@0.2.0:
@@ -4313,6 +4343,10 @@ packages:
     dependencies:
       p-locate: 5.0.0
 
+  /lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
+
   /lodash.memoize@4.1.2:
     resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
     dev: true
@@ -6723,6 +6757,10 @@ packages:
 
   /text-table@0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
+
+  /three@0.79.0:
+    resolution: {integrity: sha512-tPdnlL8ZFI5d9Ef27VzIQHi343PTGIwXqkzd9Ouf3zInAWNWqBSd+dKqlH6c+N+XfIEGNQ4TXXt+uzUjxg6Z7w==}
+    dev: false
 
   /time-span@4.0.0:
     resolution: {integrity: sha512-MyqZCTGLDZ77u4k+jqg4UlrzPTPZ49NDlaekU6uuFaJLzPIN1woaRXCbGeqOfxwc3Y37ZROGAJ614Rdv7Olt+g==}
