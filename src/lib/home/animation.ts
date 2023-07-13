@@ -389,6 +389,9 @@ window.addEventListener("load", () => {
   createSky()
   loop();
   setInterval(() => {
+    document.getElementById("description")!.style.display = "block"
+  }, 10500);
+  setInterval(() => {
     gsap.to(sea.mesh.scale, {
       x: 0.7,
       y: 0.7,
@@ -396,6 +399,5 @@ window.addEventListener("load", () => {
       duration: 5,
       ease: "elastic.out(1, 0.3)",
     });
-    document.getElementById("description")!.style.display = "block"
   }, 13000);
 });
