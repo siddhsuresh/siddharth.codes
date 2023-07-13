@@ -19,9 +19,10 @@ interface Props {
   title: string;
   children: astroHTML.JSX.Element;
   ogImage?: string;
+  className?: string;
 }
 
-const { title, ogImage } = Astro.props;
+const { title, ogImage, className } = Astro.props;
 
 const posts = (await Astro.glob<PostFrontmatter>("../../posts/**/*.mdx"))
   .filter((p) => (import.meta.env.PROD ? !p.frontmatter.draft : true))
@@ -60,7 +61,7 @@ posts.sort((a, b) => {
     <InitColorScheme />
   </head>
   <body>
-    <div class="max-w-container mx-auto px-4">
+    <div class:list={[className, "mx-auto px-4"]}>
       <header
         class="flex justify-between items-center -mt-2"
         style={{ height: "37.5px" }}
