@@ -4,8 +4,12 @@
     "lib": ["DOM"],
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["@/components/*"],
+      "@lib/*": ["@/lib/*"],
+    }
   },
-  
   "include": ["src", "api", "*.ts"]
 }

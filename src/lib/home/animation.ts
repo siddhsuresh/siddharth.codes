@@ -371,18 +371,18 @@ window.addEventListener("load", () => {
   createLights();
   createSea();
   const typewriter = new Typewriter("#name", {
-    delay: 75,
+    delay: 50,
   });
   document.getElementById("name")!.style.display = "block"
   typewriter
     .typeString("Hey!")
-    .pauseFor(1000)
+    .pauseFor(500)
     .deleteAll()
     .typeString("I'm Siddharth.")
-    .pauseFor(900)
+    .pauseFor(400)
     .deleteAll()
     .typeString("Take a Breath and <br/><br/>Explore!")
-    .pauseFor(1000)
+    .pauseFor(500)
     .deleteAll()
     .typeString("Siddharth Suresh")
     .start();

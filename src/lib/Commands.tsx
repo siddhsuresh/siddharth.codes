@@ -40,7 +40,7 @@ export function Commands({
 
   return (
     <CommandCenter inputId={INPUT_ID}>
-      <CommandCenterTrigger class="zaduma-hover-before w-12 h-12 scale-125 -mx-4 rounded-sm text-white hover:text-gray-700" />
+      <CommandCenterTrigger class="zaduma-hover-before w-12 h-12 scale-125 -mx-4 rounded-sm text-black dark:text-white hover:text-gray-700" />
       <Show when={clientside()} keyed>
         {() => <CommandsPalette posts={posts} />}
       </Show>
