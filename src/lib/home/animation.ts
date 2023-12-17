@@ -35,12 +35,6 @@ let renderer: THREE.WebGLRenderer;
 
 const logos = [
   {
-    name: "blitz",
-    url: "/blitz.png",
-    display: "View My Contributions to Blitz.js",
-    href: "https://github.com/blitz-js/blitz",
-  },
-  {
     name: "github",
     url: "/github.png",
     display: "View My Github Profile",
@@ -123,7 +117,7 @@ class Sky {
         c.mesh.scale.set(s, s, s);
         this.mesh.add(c.mesh);
       }
-    }, 13000);
+    }, 2000);
   }
 }
 
@@ -328,6 +322,7 @@ document.addEventListener(
   "scroll",
   () => {
     if (window.scrollY === 0) {
+      console.log("here");
       gsap.to(sea.mesh.scale, {
         x: 0.7,
         y: 0.7,
@@ -340,6 +335,7 @@ document.addEventListener(
         isInViewport(document.getElementById("viewProjects") as HTMLElement) ||
         isInViewport(document.getElementById("aboutMe") as HTMLElement)
       ) {
+        console.log("here1");
         gsap.to(sea.mesh.scale, {
           x: 2,
           y: 2,
@@ -350,6 +346,7 @@ document.addEventListener(
       } else if (
         isInViewport(document.getElementById("world") as HTMLElement)
       ) {
+        console.log("here2");
         gsap.to(sea.mesh.scale, {
           x: 0.85,
           y: 0.85,
@@ -367,6 +364,7 @@ document.addEventListener(
 );
 
 window.addEventListener("load", () => {
+  console.log("here4");
   createScene();
   createLights();
   createSea();
@@ -375,29 +373,17 @@ window.addEventListener("load", () => {
   });
   document.getElementById("name")!.style.display = "block"
   typewriter
-    .typeString("Hey!")
-    .pauseFor(500)
-    .deleteAll()
-    .typeString("I'm Siddharth.")
-    .pauseFor(400)
-    .deleteAll()
-    .typeString("Take a Breath and <br/><br/>Explore!")
-    .pauseFor(500)
-    .deleteAll()
     .typeString("Siddharth Suresh")
     .start();
   createSky()
   loop();
-  setInterval(() => {
-    document.getElementById("description")!.style.display = "block"
-  }, 10500);
-  setInterval(() => {
+  setTimeout(() => {
     gsap.to(sea.mesh.scale, {
       x: 0.7,
       y: 0.7,
       z: 0.7,
-      duration: 5,
+      duration: 10,
       ease: "elastic.out(1, 0.3)",
     });
-  }, 13000);
+  }, 2000);
 });
