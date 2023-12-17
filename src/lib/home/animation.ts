@@ -322,7 +322,6 @@ document.addEventListener(
   "scroll",
   () => {
     if (window.scrollY === 0) {
-      console.log("here");
       gsap.to(sea.mesh.scale, {
         x: 0.7,
         y: 0.7,
@@ -335,7 +334,6 @@ document.addEventListener(
         isInViewport(document.getElementById("viewProjects") as HTMLElement) ||
         isInViewport(document.getElementById("aboutMe") as HTMLElement)
       ) {
-        console.log("here1");
         gsap.to(sea.mesh.scale, {
           x: 2,
           y: 2,
@@ -346,7 +344,6 @@ document.addEventListener(
       } else if (
         isInViewport(document.getElementById("world") as HTMLElement)
       ) {
-        console.log("here2");
         gsap.to(sea.mesh.scale, {
           x: 0.85,
           y: 0.85,
@@ -364,7 +361,6 @@ document.addEventListener(
 );
 
 window.addEventListener("load", () => {
-  console.log("here4");
   createScene();
   createLights();
   createSea();
