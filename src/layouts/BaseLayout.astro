@@ -67,7 +67,13 @@ posts.sort((a, b) => {
         style={{ height: "37.5px" }}
       >
         <slot name="header-content">
-          <Link href="/">← back</Link>
+          {
+            Astro.url.pathname === "/projects" ? (
+              <Link href="/">← back</Link>
+            ) : (
+              <Link href="/projects">← projects</Link>
+            )
+          }
         </slot>
         <Commands client:load posts={posts} />
       </header>

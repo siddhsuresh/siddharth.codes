@@ -191,13 +191,13 @@ export function CommandsPalette({
                 </CommandItem>
               </CommandGroup>
               <CommandGroup heading={<GroupHeading>Links</GroupHeading>}>
-                <CommandItem href="https://twitter.com/hasparus">
+                <CommandItem href="https://twitter.com/siddsuresh">
                   Twitter
                 </CommandItem>
-                <CommandItem href="https://github.com/hasparus/zaduma">
+                <CommandItem href="https://github.com/siddhsuresh">
                   GitHub
                 </CommandItem>
-                <CommandItem href="https://github.com/hasparus/zaduma/issues">
+                <CommandItem href="https://github.com/siddhsuresh">
                   Contact
                 </CommandItem>
                 <CommandItem href="/rss.xml">RSS</CommandItem>
