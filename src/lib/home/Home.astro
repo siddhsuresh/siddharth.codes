@@ -18,16 +18,21 @@ import { Paragraph } from "../prose/Paragraph";
 
     <p
       id="description"
-      class="absolute flex w-full flex-col bottom-[18%] left-1/2 xl:text-2xl text-lg text-center text-white font-bold -translate-x-1/2 translate-y-1/2"
+      class="absolute flex w-full flex-col bottom-[50%] left-1/2 xl:text-2xl text-lg text-center text-white font-bold -translate-x-1/2 translate-y-1/2"
     >
       Full Stack Developer & Open Source Enthusiast
     </p>
+
+    <a
+      id="description"
+      href="/projects"
+      class="absolute flex w-full flex-col bottom-[18%] left-1/2 xl:text-2xl text-lg text-center text-white font-bold -translate-x-1/2 translate-y-1/2"
+    >
+      View My Projects ->
+    </a>
   </div>
 
-  <div
-    class="min-h-screen bg-[#0e2954c2] xl:p-16 p-3 -m-8"
-    id="vprojects"
-  >
+  <div class="min-h-screen bg-[#0e2954c2] xl:p-16 p-3 -m-8" id="vprojects">
     <p
       id="viewProjects"
       class="xl:text-4xl lg:text-2xl md:text-lg text-md text-white font-bold text-start p-10"
@@ -90,6 +95,7 @@ import { Paragraph } from "../prose/Paragraph";
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
   h1,
+  a,
   p {
     font-family: "Press Start 2P", cursive;
     color: #fff;
@@ -104,7 +110,7 @@ import { Paragraph } from "../prose/Paragraph";
     /* background: #092635; */
     /* background: linear-gradient(#e9a178, #102c57 20rem, #0e2954); */
     /* make it a conic gradien */
-    background:  linear-gradient(#e9a178, #102c57 50%, #0e2954);
+    background: linear-gradient(#e9a178, #102c57 50%, #0e2954);
     z-index: -1;
     /* make world stay as is while scrolling */
     transform: translateZ(0);
